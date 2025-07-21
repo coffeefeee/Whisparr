@@ -115,6 +115,9 @@ namespace NzbDrone.Core.Parser
 
             // JAV-FC2
             new Regex(@"(?<code>FC2.*(?:PPV).*[0-9]{4,7})", RegexOptions.IgnoreCase | RegexOptions.Compiled),
+
+            // JAV Relaxed
+            new Regex(@"\b(?<code>[A-Z]{3,5}[- ][0-9]{3,4})\b", RegexOptions.IgnoreCase | RegexOptions.Compiled),
         };
 
         private static readonly Regex[] ReportTitleFolderRegex = new[]
